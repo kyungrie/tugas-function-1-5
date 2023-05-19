@@ -43,6 +43,21 @@ function nama_terpanjang($nama) {
     return $nama_terpanjang;
 }
 $nama_terpanjang = nama_terpanjang($nama = ["Agil","Arie","Hisyam","Rizwan","Zayus"]);
-echo $nama_terpanjang;
+echo $nama_terpanjang ."</br>";
 
+function jumlah_huruf_vokal($kata) {
+    $kata = strtolower($kata);
+    $jumlah = 0;
+    $vokal = ['a', 'i', 'u', 'e', 'o'];
+
+    for ($i = 0; $i < strlen($kata); $i++) {
+        if (in_array($kata[$i], $vokal)) {
+            $jumlah++;
+        }
+    }
+
+    return $jumlah;
+}
+$huruf_vokal = jumlah_huruf_vokal("Hello");
+echo $huruf_vokal;
 ?>
